@@ -1,26 +1,9 @@
-<!-- file: resources/views/html101.blade.php-->
+@extends('template.default')
+@section('title','Workshop FORM')
+@section('content')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel = "stylesheet" href="css/bootstrap.css">
-    <style>
-        body {
-              font-family: "Mitr", sans-serif;
-        }
-    </style>
-</head>
-<body>
-    <div class = "container mt-4">
-        <h1>Workshop #HTML - FORM </h1>
-        <form action="">
+<h1>Workshop #HTML - FORM</h1>
+        <form>
             <div class="row mt-3">
                 <div class="col-sm-12 col-md-4">
                     <label for="fname">ชื่อ</label>
@@ -43,8 +26,8 @@
                 <div class="col-sm-12 col-md-4">
                     <label for="brith">วัน/เดือน/ปีเกิด</label>
                 </div>
-                <div class = "col">
-                    <input type="date" name="birthday"class="form-control-lg">
+                <div class = "col-2">
+                    <input type="date" name="birthday"class="form-control">
                 </div>
             </div>
 
@@ -60,7 +43,7 @@
                         <label for="female">หญิง</label>
                 </div>
             </div>
-            
+
             <div class="row mt-3">
                 <div class="col-sm-12 col-md-4">
                     <label for="pic">รูป</label>
@@ -83,10 +66,9 @@
                 <div class="col-sm-12 col-md-4">
                     <label for="color">สีที่ชอบ</label>
                 </div>
-                <div class = "col">
-                    <label for="favcolor">สีที่ชอบ</label>
-                    <select id="favcolor" name="favorite_color">
-                    <option value="red" selected>สีแดง</option>
+                <div class = "col-2">
+                    <select id="favcolor" name="favorite_color"class="form-select">
+                    <option value="red" selected>สีแดง </option>
                     <option value="green">สีส้ม</option>
                     <option value="green">สีเหลือง</option>
                     <option value="green">สีเขียว</option>
@@ -104,7 +86,7 @@
                 <div class = "col">
                     <input type="radio" id="เพื่อชีวิต" name="gender" value="เพื่อชีวิต">
                         <label for="เพื่อชีวิต">เพื่อชีวิต</label>
-                        
+
                         <input type="radio" id="ลูกทุ่ง" name="gender" value="ลูกทุ่ง">
                         <label for="ลูกทุ่ง">ลูกทุ่ง</label>
 
@@ -115,7 +97,7 @@
 
             <div class="row mt-3">
                 <div class="col-sm-12 col-md-4">
-            
+
                 <input type="checkbox" id="agree_data" name="data_consent" value="yes">
                 <label for="agree_data">ยินยอมให้เก็บข้อมูล</label>
                 </div>
@@ -123,15 +105,29 @@
 
             <div class="row mt-4">
             <div class="col-6">
-        <input type="reset" value="Reset" class="btn btn-light ">
+            <input type="reset" value="Reset" class="btn btn-light ">
             </div>
 
             <div class="col-6 text-end">
-        <input type="submit" value="Submit" class="btn btn-success">
+            <input type="submit" value="Submit" class="btn btn-success" onclick="clickMe()">
             </div>
-        </div>
+         </div>
 
         </form>
-    </div>
-</body>
-</html>
+@endsection
+@push('scripts')
+ <script>
+    function clickMe(){
+        console.log(Clicked);
+
+    }
+    let myvar = 1
+    let myvar2 = "1"
+    myvar2 = parseInt(myvar2)
+
+    console.log(myvar+myvar2+"\n\n\n\nทดสอบ");
+    console.log(1=='1');
+
+
+    </script>
+@endpush
