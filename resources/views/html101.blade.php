@@ -241,8 +241,7 @@
         // }
         let clickMe = function(){
             let fname = document.getElementById('fname')
-        //    fname.value = "from ClickMe"
-        //    console.log(fname.value);
+
            if (fname.value == ""){
             fname.classList.remove('is-valid')
             fname.classList.add('is-invalid')
@@ -323,16 +322,16 @@
 
             if (!selectedSong) {
                 allSongInputs.forEach(input => {
-                input.classList.add('is-invalid'); // ทำให้ปุ่มวงกลมเป็นสีแดง
+                input.classList.add('is-invalid');
             });
-            // สั่งให้ข้อความ Error แสดงผล (เพราะปกติ Bootstrap จะซ่อนไว้)
+
                 errorMsg.style.display = 'block';
             } else {
                 allSongInputs.forEach(input => {
                 input.classList.remove('is-invalid');
-                input.classList.add('is-valid'); // (ถ้าอยากให้เป็นสีเขียวเมื่อเลือกแล้ว)
+                input.classList.add('is-valid');
             });
-                errorMsg.style.display = 'none'; // ซ่อนข้อความ Error
+                errorMsg.style.display = 'none';
 }
 
 

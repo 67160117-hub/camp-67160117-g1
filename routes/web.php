@@ -8,3 +8,4 @@ Route::get('/', function () {
 Route::get('/se', function () {
     return view('template.default');
 });
+Route::get('/mycontroller',[App\Http\Controllers\MyController::class,'index']);
