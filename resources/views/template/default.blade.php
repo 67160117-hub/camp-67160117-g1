@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML - @yield('title')</title>
-    <link rel = "stylesheet" href="css/bootstrap.css">
+    <link rel = "stylesheet" href=" {{ url('css/bootstrap.css') }}">
     <style>
         body {
               font-family: "Mitr", sans-serif;

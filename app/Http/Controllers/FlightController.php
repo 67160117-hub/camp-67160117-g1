@@ -11,7 +11,7 @@ class FlightController extends Controller
      */
     public function index()
     {
-        return view('flights.index');
+        return view('pokedex.index');
     }
 
     /**
